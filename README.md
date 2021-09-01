@@ -62,12 +62,12 @@ developing your own process.
 
 - Add a new toy when the toy form is submitted
 
-  - How I debugged:
+  - How I debugged: Figured out what error was thrown by going to networks tab in chrome. Saw NameError (uninitialized constant ToysController::Toys). From there, I was able to tell it was coming from the ToysController class and since we were using the update action, I was able to find the problem There was an extra s on Toy.create().
 
 - Update the number of likes for a toy
 
-  - How I debugged:
+  - How I debugged: Figured out what error was thrown by going to networks tab in chrome. I was able to dictate that the update action method was not rendering any JSON. Added render json: and it works.
 
 - Donate a toy to Goodwill (and delete it from our database)
 
-  - How I debugged:
+  - How I debugged: Figured out what error was thrown by going to networks tab in chrome. I was able to find ActionController::RoutingError (No route matches [DELETE] "/toys/2"). Added the :destroy action to :toys resources and everything works.
